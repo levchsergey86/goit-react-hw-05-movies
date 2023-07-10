@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import Header from './Header/Header';
+import NotFoundView from './NotFoundView/NotFoundView';
 
 const HomePage = lazy(() =>
   import('./HomePage/HomePage' /* webpackChunkName: "HomePage" */)
@@ -32,7 +33,7 @@ export const App = () => {
             <Route path="/movies/:movieId/cast" element={<Cast />} />
           </Route>
 
-          {/* <Route path="*" element={<NotFoundView />} /> */}
+          <Route path="*" element={<NotFoundView />} />
           <Route path="*" element={<HomePage />} />
         </Routes>
       </Suspense>
