@@ -1,4 +1,4 @@
-import s from './SearcBar.module.css';
+import s from './SearchBar.module.css';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -28,7 +28,7 @@ const SearchBar = ({ onSearch }) => {
           value={searchQuery}
           autoComplete="off"
           autoFocus
-          placeholder="Search ..."
+          placeholder="Enter movie title..."
           onChange={handleQuerySearch}
           className={s.searchInput}
         />

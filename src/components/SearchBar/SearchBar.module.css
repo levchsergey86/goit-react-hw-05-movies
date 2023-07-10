@@ -1,31 +1,30 @@
 .searchForm {
-  margin-left: 35%;
-  margin-right: 30%;
+  text-align: center;
 }
 .searchInput {
   padding: 10px 15px;
   border-radius: 10px;
-  border: 3px solid #2196f3;
+  border: 3px solid #2600ff;
   margin-right: 20px;
   font-size: 20px;
-  outline: transparent;
 }
+
 .searchInput:hover {
   background-color: #f4f8fa;
 }
 
 .searchButton {
   cursor: pointer;
-  padding: 8px 15px;
+  padding: 12px 15px;
   margin-bottom: 15px;
-  box-shadow: 1px 2px 2px 0 rgb(0, 0, 0/0.5);
-  transition: box-shadow 250ms linear;
   border-radius: 10px;
-  border: 3px solid #2196f3;
-  font-weight: bold;
+  border: 3px solid #2600ff;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .searchButton:hover {
-  background-color: #2196f3;
+  background-color: #2600ff;
   color: white;
 }

@@ -1,9 +1,9 @@
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import SearchBar from 'components/SearchBar';
+import SearchBar from 'components/SearchBar/SearchBar';
 import { fetchByQuery } from 'services/movies-api';
-import MovieList from 'components/TrendingMovies/MovieList';
+import MovieList from 'components/MovieList/MovieList';
 import Container from 'components/Container/Container';
 import PageHeading from 'components/Pageheading/Pageheading';
 

@@ -36,10 +36,12 @@ const Cast = () => {
               <img
                 src={`https://image.tmdb.org/t/p/w300${castItem.profile_path}`}
                 alt={`${castItem.name} portrait`}
+                onError={(e) => { e.target.src = 'https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930'; }}
+                className={s.castImg}
               />
               <div>
-                <p>Name: {castItem.name}</p>
-                <p>Character: {castItem.character}</p>
+                <p className={s.castName}>Name: {castItem.name} </p>
+                <p className={s.castName}>Character: {castItem.character} </p>
               </div>
             </li>
           );

@@ -1,9 +1,9 @@
 import Container from 'components/Container/Container';
 import PageHeading from 'components/Pageheading/Pageheading';
-import MovieList from 'components/TrendingMovies/MovieList';
+import MovieList from 'components/MovieList/MovieList';
 import { useEffect, useState } from 'react';
 import { getMovies } from 'services/movies-api';
-import NotFoundView from 'ui/NotFoundView';
+import PageNotFound from 'PageNotFound/PageNotFound';
 
 export default function GetTrendingMovies() {
   const [movies, setMovies] = useState([]);
@@ -33,7 +33,7 @@ export default function GetTrendingMovies() {
         <PageHeading text={'Trending Movies'}></PageHeading>
         {/* <SearchBar onSubmit={handleFormSubmit} /> */}
         {loading && 'Loading ...'}
-        {isNotFound && <NotFoundView />}
+        {isNotFound && <PageNotFound />}
         {error && <div>{error}</div>}
         {movies && <MovieList movies={movies} />}
       </Container>

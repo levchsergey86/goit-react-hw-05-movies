@@ -1,8 +1,8 @@
-import s from './AppBar.module.css';
+import s from './Header.module.css';
 import Navigation from 'components/Navigation/Navigation';
 import Container from 'components/Container/Container';
 
-export default function Appbar() {
+export default function Header () {
   return (
     <header className={s.header}>
       <Container>

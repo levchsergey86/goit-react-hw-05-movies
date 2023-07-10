@@ -1,14 +1,14 @@
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import Appbar from './AppBar/AppBar';
+import Header from './Header/Header';
 
 const HomePage = lazy(() =>
   import('./HomePage/HomePage' /* webpackChunkName: "HomePage" */)
 );
 
 const MoviesPage = lazy(() =>
-  import('../views/MoviesPage' /* webpackChunkName: "MoviesPage" */)
+  import('../MoviesPage/MoviesPage' /* webpackChunkName: "MoviesPage" */)
 );
 const MovieDetailsPage = lazy(() =>
   import(
@@ -21,7 +21,7 @@ const Cast = lazy(() => import('./Cast/Cast' /* webpackChunkName: "Cast" */));
 export const App = () => {
   return (
     <>
-      <Appbar />
+      <Header />
       {/* <SearchBar></SearchBar> */}
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>

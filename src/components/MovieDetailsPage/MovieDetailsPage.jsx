@@ -40,7 +40,7 @@ export default function MovieDetailsPage() {
   return (
     <>
       <Container>
-        <button onClick={handleClick} className={s.backButton}>
+        <button onClick={handleClick} className={s.MovieDetailsGoBackButton}>
           Go back
         </button>
 
@@ -54,24 +54,24 @@ export default function MovieDetailsPage() {
               src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
               alt={movie.title}
             />
-            <h3>{movie.title}</h3>
-            <p>({getYear()})</p>
-            <p>User Score: {movie.popularity}</p>
-            <div className="movie_overview">
-              <h3>Overview</h3>
-              <p>{movie.overview}</p>
+            <h3 className={s.MovieDetailsMovieTitle}>{movie.title}</h3>
+            <p className={s.MovieDetailsMovieYear}>({getYear()})</p>
+            <p className={s.MovieDetailsUserScore}>User Score: {movie.popularity}</p>
+            <div className={s.MovieDetailsMovieOverview}>
+              <h3 className={s.MovieDetailsOverviewHead}>Overview</h3>
+              <p className={s.MovieDetailsOverviewText}>{movie.overview}</p>
             </div>
           </div>
         )}
         <hr />
         <div>
-          <h2>Additional Information</h2>
+          <h2 className={s.MovieDetailsOverviewHead}>Additional Information</h2>
           <NavLink
             to={`/movies/${movieId}/reviews`}
             style={({ isActive }) => (isActive ? activeClassName : undefined)}
             state={location.state}
           >
-            <p className={s.reviews}>Reviews</p>
+            <p className={s.MovieDetailsReviews}>Reviews</p>
           </NavLink>
 
           <NavLink
@@ -79,7 +79,7 @@ export default function MovieDetailsPage() {
             style={({ isActive }) => (isActive ? activeClassName : undefined)}
             state={location.state}
           >
-            <p className={s.cast}>Cast</p>
+            <p className={s.MovieDetailsCast}>Cast</p>
           </NavLink>
           <hr />
           <Outlet />

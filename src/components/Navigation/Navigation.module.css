@@ -1,18 +1,14 @@
-.link {
+.NavigationLink {
+  font-weight: 600;
+  color: black;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
   display: inline-block;
   text-decoration: none;
-  padding: 12px;
-  font-weight: 500;
-  color: #2a363b;
-  font-size: 18px;
+  padding: 16px;
 }
 
 .link :focus,
 .link:hover {
   color: #2196f3;
 }
-
-/* .activeLink {
-  composes: link;
-  color: #2196f3;
-} */

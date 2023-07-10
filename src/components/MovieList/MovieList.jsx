@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import s from './MovieList.module.css'
 
 const MovieList = ({ movies, prevLocation }) => {
   return (
@@ -7,7 +8,7 @@ const MovieList = ({ movies, prevLocation }) => {
       <ul>
         {movies.map(({ id, original_title }) => (
           <li key={id}>
-            <Link to={`/movies/${id}`} state={{ from: prevLocation }}>
+            <Link className={s.MovieListItem} to={`/movies/${id}`} state={{ from: prevLocation }}>
               {/* <Link to={`/movies/${id}`} state={{ from: location.pathname }}> */}
               <h3>{original_title}</h3>
             </Link>
@@ -26,4 +27,5 @@ MovieList.propTypes = {
     })
   ).isRequired,
 };
+
 export default MovieList;

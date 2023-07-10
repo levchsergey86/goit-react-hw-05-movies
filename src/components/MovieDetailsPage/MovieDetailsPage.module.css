@@ -1,40 +1,76 @@
-.backButton {
+.MovieDetailsGoBackButton {
   cursor: pointer;
-  width: 80px;
+  width: auto;
   text-align: center;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
   padding: 8px 15px;
   margin-bottom: 15px;
   box-shadow: 1px 2px 2px 0 rgb(0, 0, 0/0.5);
   transition: box-shadow 250ms linear;
-  border-radius: 10px;
-  border: 1px solid #2196f3;
+  border-radius: 5px;
+  border: 1px solid #1100ff;
 }
 
-.backButton:hover {
-  background-color: #2196f3;
+.MovieDetailsGoBackButton:hover {
+  background-color: #1100ff;
   color: white;
 }
+
+.MovieDetailsOverviewText {
+  text-align: justify;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 18px;
+
+}
+
+.MovieDetailsMovieTitle
+.MovieDetailsOverviewHead
+ {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 26px;
+  font-weight: 600;
+  
+}
+
+.MovieDetailsMovieYear
+.MovieDetailsUserScore
+{
+  font-family:'Times New Roman', Times, serif;
+  font-size: 14px;
+  
+}
+
+
 
 .reviews {
   display: inline-block;
   padding: 8px 15px;
   border-radius: 10px;
-  border: 1px solid #2196f3;
+  border: 1px solid #1100ff;
   margin-right: 30px;
   font-weight: bold;
 }
 
-.cast {
+.MovieDetailsCast {
   display: inline-block;
   padding: 8px 28px;
   border-radius: 10px;
-  border: 1px solid #2196f3;
+  border: 1px solid #1100ff;
   font-weight: bold;
 }
 
-.reviews:hover,
-.cast:hover {
-  background-color: #2196f3;
+.MovieDetailsReviews {
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 10px;
+  border: 1px solid #1100ff;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.MovieDetailsReviews:hover,
+.MovieDetailsCast:hover {
+  background-color: #1100ff;
   color: white;
 }

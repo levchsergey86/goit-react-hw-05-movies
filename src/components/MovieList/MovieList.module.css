@@ -1,0 +1,10 @@
+.MovieListItem {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.MovieListItem:hover,
+.MovieListItem:focus {
+color: blue;
+}
